@@ -1,0 +1,21 @@
+section {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-weight: bold;
+  color: #302280;
+  font-size: larger;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 1px #DDD;
+          box-shadow: 0px 2px 1px #DDD;
+  margin-left: -10px !important;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  border-left: 1px solid #DDD;
+}
+
+.bold {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

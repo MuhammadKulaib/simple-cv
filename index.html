@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cv</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+    <main id="cv" class="container">
+        <br>
+        <!-- Personal information -->
+        <section class="personal-information">
+            <div class="title">Personal information</div>
+            <div><span class="bold">Name: </span><span v-text="name"></span></div>
+            <div><span class="bold">age: </span><span v-text="age"></span> year</div>
+            <div><span class="bold">phone number: </span><span v-text="phone_number"></span></div>
+            <div><span class="bold">email: </span><span v-text="email"></span></div>
+            <div><span class="bold">address: </span><span v-text="address"></span></div>            
+        </section>
+        <!-- objectives -->
+        <section class="objectives">
+            <div class="title">objectives</div>
+            <ul>
+                <li v-for="objective in objectives">{{objective}}</li>
+            </ul>
+        </section>
+        <!-- Educations -->
+        <section class="educations">
+            <div class="title">Educations</div>
+            <ul>
+                <li v-for="education in educations">
+                    <b>{{education.major}}</b>
+                    <span> {{education.school}},</span>
+                    <i> {{education.location}}</i>
+                    <span> {{education.duration}}</span>
+                </li>
+            </ul>
+        </section>
+        <!-- Experiences -->
+        <section>
+            <div class="title">Experiences</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Job title</th>
+                        <th>company name</th>
+                        <th>duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="experience in experiences">
+                        <td>{{experience.job_title}}</td>
+                        <td>{{experience.company_name}}</td>
+                        <td>{{experience.duration}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- skills -->
+        <section class="skills">
+            <ul class="col-lg-6">
+                <li v-for="skill in skills">{{skill}}</li>
+            </ul>
+        </section>
+        
+        
+    </main>
+    
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#cv',
+            data:{
+                name: 'Muhammad Mahmoud Thabet Kulaib',
+                age:'20',
+                phone_number:'+967778031821',
+                email:'muhammad.kulaib.alqadasy@gmail.com',
+                address:'Yemen - sana\'a',
+                skills:[
+                    "HTML / HTML5",
+                    "CSS / CSS3",
+                    "Bootstrap",
+                    "Javascript",
+                    "Jquery",
+                    "React.js",
+                    "Vue.js",
+                    "PHP",
+                    "C# form",
+                    "c++",
+                    "Oracle",
+                    "Sql"
+                    
+                ],
+                objectives:[
+                    "Raise the number of customers",
+                    "Raise the possibilities of the company"
+                ],
+                educations:[
+                   {
+                       major:"Secondary certificate / Scientific",
+                       school:"Althaora school",
+                       location:"Taiz – qadas",
+                       duration:"2017 – 2018"
+                   } 
+                ],
+                experiences:[
+                    {
+                        job_title: "back end website designer",
+                        company_name: "Upwork website",
+                        duration: "2021 - till now"
+                    },
+                    {
+                        job_title: "front end website designer",
+                        company_name: "Upwork website",
+                        duration: "2020 - 2021"
+                    }
+                ]
+                
+            }
+            
+               
+            
+        })
+    </script>
+</body>
+</html>
