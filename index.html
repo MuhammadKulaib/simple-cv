@@ -11,60 +11,73 @@
 <body >
     <main id="cv" class="container">
         <br>
-        <!-- Personal information -->
-        <section class="personal-information">
-            <div class="title">Personal information</div>
-            <div><span class="bold">Name: </span><span v-text="name"></span></div>
-            <div><span class="bold">age: </span><span v-text="age"></span> year</div>
-            <div><span class="bold">phone number: </span><span v-text="phone_number"></span></div>
-            <div><span class="bold">email: </span><span v-text="email"></span></div>
-            <div><span class="bold">address: </span><span v-text="address"></span></div>            
-        </section>
-        <!-- objectives -->
-        <section class="objectives">
-            <div class="title">objectives</div>
-            <ul>
-                <li v-for="objective in objectives">{{objective}}</li>
-            </ul>
-        </section>
-        <!-- Educations -->
-        <section class="educations">
-            <div class="title">Educations</div>
-            <ul>
-                <li v-for="education in educations">
-                    <b>{{education.major}}</b>
-                    <span> {{education.school}},</span>
-                    <i> {{education.location}}</i>
-                    <span> {{education.duration}}</span>
-                </li>
-            </ul>
-        </section>
+        <div class="row">
+            <div class="my-image col-lg-3 col-md-4 col-sm-5">
+                <img src="img/muhammad.png" class=" img-fluid "> 
+            </div>
+            <!-- Personal information -->
+            <section class="personal-information col-lg-9 col-md-8 col-sm-7">
+                <div class="title">Personal information</div>
+                <div><span class="bold">Name: </span><span v-text="name"></span></div>
+                <div><span class="bold">age: </span><span v-text="age"></span> year</div>
+                <div><span class="bold">phone number: </span><span v-text="phone_number"></span></div>
+                <div><span class="bold">email: </span><span v-text="email"></span></div>
+                <div><span class="bold">address: </span><span v-text="address"></span></div>            
+            </section>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <!-- objectives -->
+                <section class="">
+                    <div class="title">objectives</div>
+                    <ul>
+                        <li v-for="objective in objectives">{{objective}}</li>
+                    </ul>
+                </section>
+                <!-- Educations -->
+                <section class="">
+                    <div class="title">Educations</div>
+                    <ul>
+                        <li v-for="education in educations">
+                            <b>{{education.major}}</b>
+                            <span> {{education.school}},</span>
+                            <i> {{education.location}}</i>
+                            <span> {{education.duration}}</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <!-- skills -->
+            <section class="col-lg-4 col-md-4 col-sm-4">
+                <div class="title">Skills</div>
+                <ul class="col-lg-6">
+                    <li v-for="skill in skills">{{skill}}</li>
+                </ul>
+            </section>
+           
+        </div>
+        
         <!-- Experiences -->
         <section>
             <div class="title">Experiences</div>
-            <table class="table">
+            <table class="table table-responsive table-hover">
                 <thead>
                     <tr>
-                        <th>Job title</th>
-                        <th>company name</th>
-                        <th>duration</th>
+                        <th>Job Title</th>
+                        <th>Company Name</th>
+                        <th>Duration</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="experience in experiences">
-                        <td>{{experience.job_title}}</td>
+                        <td class="bold">{{experience.job_title}}</td>
                         <td>{{experience.company_name}}</td>
                         <td>{{experience.duration}}</td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        <!-- skills -->
-        <section class="skills">
-            <ul class="col-lg-6">
-                <li v-for="skill in skills">{{skill}}</li>
-            </ul>
-        </section>
+        
         
         
     </main>
@@ -109,12 +122,12 @@
                 experiences:[
                     {
                         job_title: "back end website designer",
-                        company_name: "Upwork website",
+                        company_name: "Mostaql website",
                         duration: "2021 - till now"
                     },
                     {
                         job_title: "front end website designer",
-                        company_name: "Upwork website",
+                        company_name: "Mostaql website",
                         duration: "2020 - 2021"
                     }
                 ]
