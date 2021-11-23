@@ -20,5 +20,8 @@ section {
 .my-image img {
   border: 1px solid #DDD;
   border-radius: 5px;
+  height: 200px;
+  -webkit-box-shadow: 0px 1px 1px #ddd;
+          box-shadow: 0px 1px 1px #ddd;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,11 +12,11 @@
     <main id="cv" class="container">
         <br>
         <div class="row">
-            <div class="my-image col-lg-3 col-md-4 col-sm-5">
+            <div class="my-image col-lg-2 col-md-3 col-sm-4">
                 <img src="img/muhammad.png" class=" img-fluid "> 
             </div>
             <!-- Personal information -->
-            <section class="personal-information col-lg-9 col-md-8 col-sm-7">
+            <section class="personal-information col-lg-10 col-md-9 col-sm-8">
                 <div class="title">Personal information</div>
                 <div><span class="bold">Name: </span><span v-text="name"></span></div>
                 <div><span class="bold">age: </span><span v-text="age"></span> year</div>
@@ -51,7 +51,7 @@
             <section class="col-lg-4 col-md-4 col-sm-4">
                 <div class="title">Skills</div>
                 <ul class="col-lg-6">
-                    <li v-for="skill in skills">{{skill}}</li>
+                    <li v-for="skill in skills">{{skill.skill}}  <progress style="display: block;" :value="skill.expertise" max="100" ></progress> </li>
                 </ul>
             </section>
            
@@ -93,18 +93,67 @@
                 email:'muhammad.kulaib.alqadasy@gmail.com',
                 address:'Yemen - sana\'a',
                 skills:[
-                    "HTML / HTML5",
-                    "CSS / CSS3",
-                    "Bootstrap",
-                    "Javascript",
-                    "Jquery",
-                    "React.js",
-                    "Vue.js",
-                    "PHP",
-                    "C# form",
-                    "c++",
-                    "Oracle",
-                    "Sql"
+                    {
+                        skill:"HTML / HTML5",
+                        expertise: 97
+                    },
+                    {
+                        skill:"CSS / CSS3",
+                        expertise: 95
+                    },
+                    {
+                        skill:"Bootstrap",
+                        expertise: 87
+                    },
+                    {
+                        skill:"Javascript",
+                        expertise: 70
+                    },
+                    {
+                        skill:"Jquery",
+                        expertise: 70
+                    },
+                    {
+                        skill:"React.js",
+                        expertise: 85
+                    },
+                    {
+                        skill:"Vue.js",
+                        expertise: 92
+                    },
+                    {
+                        skill:"PHP",
+                        expertise: 90
+                    },
+                    {
+                        skill:"C# form",
+                        expertise: 80
+                    },
+                    {
+                        skill:"c++",
+                        expertise: 90
+                    },
+                    {
+                        skill:"Oracle",
+                        expertise: 70
+                    },
+                    {
+                        skill:"Sql",
+                        expertise: 90
+                    },
+                    {
+                        skill:"mySQL",
+                        expertise: 80
+                    },
+                    {
+                        skill:"Database Administrator",
+                        expertise: 95
+                    },
+                    {
+                        skill:"project manager",
+                        expertise: 65
+                    }
+                    
                     
                 ],
                 objectives:[
