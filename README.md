@@ -1,2 +1,2 @@
-# CV
- my cv
+# simple cv
+ simple cv that use normal vue 
